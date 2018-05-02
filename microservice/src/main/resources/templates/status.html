@@ -1,0 +1,49 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Spring Boot Thymeleaf Hello World Example</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+    <link rel="stylesheet" type="text/css" href="webjars/bootstrap/4.1.0/css/bootstrap.min.css" />
+
+</head>
+<body>
+
+<div class="container">
+
+    <div class="starter-template">
+
+        <table class="table table-striped">
+            <thead class="table-dark">
+                <tr>
+                    <th>Application Number</th>
+                    <th>Attribute Name</th>
+                    <th>Atribute Value</th>
+                    <th>Publication Status</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr th:each="mappableAttribute  : ${mappableAttributes}">
+                    <td th:text="${mappableAttribute.applicationNumber}"></td>
+                    <td th:text="${mappableAttribute.attributeName}"></td>
+                    <td th:text="${mappableAttribute.attributeValue}"></td>
+                    <td>
+                        <div th:switch="${mappableAttribute.isPublished}">
+                            <span th:case="true" style="color: green;">PUBLISHED</span>
+                            <span th:case="false" style="color: red;">NOT PUBLISHED</span>
+                            <span th:case="*">FAIL</span>
+                        </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+
+    </div>
+
+</div>
+<!-- /.container -->
+
+<script type="text/javascript" src="webjars/bootstrap/4.1.0/js/bootstrap.min.js"></script>
+
+</body>
+</html>
