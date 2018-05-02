@@ -1,0 +1,5 @@
+# The following folders and files should not be tracked by git for this project
+microservice/.idea/
+microservice/.mvn/
+microservice/target/
+microservice/kettle-demo.iml

@@ -61,7 +61,7 @@ The demo assumes the following prerequisites:
 
 Two new database schemas must be created in MySql; `extract_db` and `load_db`.
 
-A MySql user should be created (optional) and granted access to these two new schemas.
+A MySql user should be created and granted access to these two new schemas.
 
 The demo assumes the following MySql user:
 
@@ -70,7 +70,7 @@ The demo assumes the following MySql user:
 
 If these credentials are not suitable then the preferred MySql user can be specified at a later stage.
 
-Once the schemas have been created, the [etl-ddl-dml.sql](/resources/sql/etl-ddl-dml.sql) file should be executed in the MySql console/workbench in order to create the database structure and pre-populate the databases with required data.
+Once the schemas have been created, the [etl-ddl-dml.sql](/resources/sql/etl-ddl-dml.sql) file should be executed in the MySql console|workbench in order to create the database structure and pre-populate the databases with required data.
 
 ## Kettle installation and configuration
 
@@ -111,7 +111,7 @@ The ETL steps included in the transform are:
 1. update the source database following a successful load operation
 1. provide error handling for each step in the ETL process
 
-If your MySql installation is not installed on the same machine as Kettle or if you are using a different MySql user (not the expected kettle-demo user) then you will need to configured the database connections.
+If your MySql installation is not installed on the same machine as Kettle or if you are using a different MySql user (not the expected *kettle-demo* user) then you will need to configure the database connections.
 
 The database connections can be configured in *Spoon* by editing the specific connections via the *View tab -> ETL Mapping Attribute Transformation -> Database connections*.
 
@@ -134,7 +134,7 @@ The executed transformation process will provide a report indicating the metrics
 The microservice is located in the [microservice](microservice) directory and can be built and executed using the maven command shown below:
 
 * `mvn clean package`
-* `java -jar target/kettle-demo.jar
+* `java -jar target/kettle-demo.jar`
 
 The microservice end points are shown below:
 
