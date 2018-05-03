@@ -136,6 +136,14 @@ The microservice is located in the [microservice](microservice) directory and ca
 * `mvn clean package`
 * `java -jar target/kettle-demo.jar`
 
+If you have changed the configuration of the database, you will need to reflect those changes in the [application.properties](/microservice/src/main/resources/application.properties) file.
+
+```
+spring.datasource.url=jdbc:mysql://localhost:3306/extract_db
+spring.datasource.username=kettle-demo
+spring.datasource.password=Pa$$word
+```
+
 The microservice end points are shown below:
 
 * http://localhost:8080/status
